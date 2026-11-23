@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Research — Elisabetta Rocchetti</title>
+<meta name="description" content="Elisabetta Rocchetti — researcher in mechanistic interpretability and AI safety.">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">ER</a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="research.html" class="active">Research</a>
+      <a href="skills.html">Skills</a>
+      <a href="background.html">Background</a>
+      <a href="https://github.com/eliroc98" target="_blank">GitHub</a>
+    </div>
+  </div>
+</nav>
+
+<div class="layout">
+  <aside class="toc" aria-label="Contents">
+    <div class="toc-label">Contents</div>
+    <ul class="toc-pages">
+      <li class="toc-page">
+        <a href="index.html">About</a>
+      </li>
+      <li class="toc-page current">
+        <a href="research.html">Research</a>
+        <ul class="toc-sub">
+          <li><a href="#higher-dimensional-concepts-in-llms">Higher-Dimensional Concepts in LLMs</a></li>
+          <li><a href="#geometric-approaches">Geometric Approaches</a></li>
+          <li><a href="#learning-dynamics">Learning Dynamics</a></li>
+          <li><a href="#complex-abstract-concepts">Complex &amp; Abstract Concepts</a></li>
+          <li><a href="#other-research">Other Research</a></li>
+        </ul>
+      </li>
+      <li class="toc-page">
+        <a href="skills.html">Skills &amp; Community</a>
+      </li>
+      <li class="toc-page">
+        <a href="background.html">Background</a>
+      </li>
+    </ul>
+  </aside>
+
+<main class="page">
+  <section id="research">
+    <div class="overline">Research</div>
+    <h1 class="research-title">What I work on</h1>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:var(--accent)"></div> Repository</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--green)"></div> Publication</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--blue)"></div> Tool / Framework</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--amber)"></div> Method</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--white)"></div> Upskilling</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--orange)"></div> Community building</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--purple)"></div> Teaching</div>
+    <div class="legend-item"><div class="legend-dot" style="background:var(--teal)"></div> Writing</div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ═══════════ 1. HIGHER-DIMENSIONAL CONCEPTS ═══════════ -->
+  <div class="section" id="higher-dimensional-concepts-in-llms">
+    <div class="section-header">
+      <span class="section-number">i.</span>
+      <span class="section-title">Higher-Dimensional Concepts in LLMs</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills">
+
+      <div class="skill primary">
+        <div class="skill-top">
+          <div class="skill-dot" style="background:var(--section-accent)"></div>
+          <div class="skill-name">How LLMs Follow Instructions</div>
+        </div>
+        <div class="skill-desc">Developed a diagnostic framework (probing, INLP, causal ablation, PWCCA) showing that instruction-following in LLMs works through compositional coordination of skills rather than a single universal mechanism.</div>
+        <div class="evidence">
+          <a class="ev pub" href="https://arxiv.org/abs/2604.06015" target="_blank">How LLMs Follow Instructions (EMNLP 2026)</a>
+          <a class="ev repo" href="https://github.com/eliroc98/how-llms-follow-instructions" target="_blank">how-llms-follow-instructions</a>
+          <span class="ev concept">diagnostic probing</span>
+          <span class="ev concept">INLP / causal ablation</span>
+          <span class="ev concept">PWCCA</span>
+        </div>
+      </div>
+
+      <div class="skill primary">
+        <div class="skill-top">
+          <div class="skill-dot" style="background:var(--section-accent)"></div>
+          <div class="skill-name">Counting &amp; Length Control</div>
+        </div>
+        <div class="skill-desc">Investigated how LLMs internally track and enforce word-count constraints, and how instruction-tuning imparts this ability across languages, using Direct Logit Attribution and model diffing.</div>
+        <div class="evidence">
+          <a class="ev pub" href="https://arxiv.org/abs/2509.02075" target="_blank">How Instruction-Tuning Imparts Length Control (ANNPR 2026)</a>
+          <a class="ev repo" href="https://github.com/eliroc98/length-control" target="_blank">length-control</a>
+          <a class="ev repo" href="https://github.com/eliroc98/clt-dataset" target="_blank">clt-dataset</a>
+          <span class="ev concept">Direct Logit Attribution</span>
+          <span class="ev concept">model diffing</span>
+        </div>
+      </div>
+
+      <div class="skill primary">
+        <div class="skill-top">
+          <div class="skill-dot" style="background:var(--section-accent)"></div>
+          <div class="skill-name">Refusal: Diff-in-Means vs INLP</div>
+        </div>
+        <div class="skill-desc">Reproduced and extended work showing refusal is mediated by a single direction in activation space, comparing difference-in-means with INLP to test whether refusal is better described by a higher-dimensional subspace. Erasing the refusal subspace leaves activations between the harmful and harmless clusters, while reflecting across it moves them to the opposite cluster: tentative evidence that models encode the absence of a concept differently from its opposite. The project started in the BlueDot Impact Technical AI Safety Project Sprint.</div>
+        <div class="evidence">
+          <a class="ev pub" href="https://arxiv.org/abs/2606.13720" target="_blank">Refusal Beyond a Single Direction (2026)</a>
+          <a class="ev pub" href="https://docs.google.com/document/d/1s5TXaa0ddkekicoAngFqszzOaZjxw7QN/edit?usp=sharing&ouid=115209116833173673505&rtpof=true&sd=true" target="_blank">Extracting Refusal Direction: Diff-in-means vs INLP</a>
+          <a class="ev repo" href="https://github.com/eliroc98/refusal_direction" target="_blank">refusal_direction</a>
+          <span class="ev concept">activation steering</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════ 2. GEOMETRY ═══════════ -->
+  <div class="section" id="geometric-approaches">
+    <div class="section-header">
+      <span class="section-number">ii.</span>
+      <span class="section-title">Geometric Approaches</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills">
+
+      <div class="skill primary">
+        <div class="skill-top">
+          <div class="skill-dot" style="background:var(--section-accent)"></div>
+          <div class="skill-name">Exploring Input Manifolds of Transformers</div>
+        </div>
+        <div class="skill-desc">Studying equivalence classes in Transformer input spaces with Riemannian geometry and pullback metrics, to reveal which inputs a model perceives as the same. Presented at NeurIPS 2025 and the UniReps workshop.</div>
+        <div class="evidence">
+          <a class="ev pub" href="https://openreview.net/forum?id=2sZSxmswxn" target="_blank">Unveiling Transformer Perception (NeurIPS 2025)</a>
+          <a class="ev repo" href="https://github.com/alessiomarta/transformers_equivalence_classes" target="_blank">transformers_equivalence_classes</a>
+          <span class="ev concept">pullback metrics</span>
+        </div>
+      </div>
+
+      <div class="skill primary">
+        <div class="skill-top">
+          <div class="skill-dot" style="background:var(--section-accent)"></div>
+          <div class="skill-name">Riemannian Manifold Steering</div>
+        </div>
+        <div class="skill-desc">Using Riemannian geometry to steer language models along concept manifolds. Currently under review.</div>
+        <div class="evidence">
+          <span class="ev pub">Riemannian Manifold Steering (under review)</span>
+          <span class="ev concept">Riemannian geometry</span>
+          <span class="ev concept">activation steering</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════ 3. LEARNING DYNAMICS ═══════════ -->
+  <div class="section" id="learning-dynamics">
+    <div class="section-header">
+      <span class="section-number">iii.</span>
+      <span class="section-title">Learning Dynamics</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills">
+
+      <div class="skill primary">
+        <div class="skill-top">
+          <div class="skill-dot" style="background:var(--section-accent)"></div>
+          <div class="skill-name">Transformers as Complex Networks</div>
+        </div>
+        <div class="skill-desc">Representing Transformer LLMs as directed, weighted graphs (nodes = attention heads and MLPs, edges = causal influence measured by ablation), and tracking graph-theoretic metrics across 143 training checkpoints of Pythia-14M on induction tasks.</div>
+        <div class="evidence">
+          <a class="ev pub" href="https://arxiv.org/abs/2509.15269" target="_blank">Modeling Transformers as Complex Networks (2025)</a>
+          <a class="ev repo" href="https://github.com/eliroc98/nnets-transformers" target="_blank">nnets-transformers</a>
+          <span class="ev concept">Complex Network Theory</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════ 4. COMPLEX & ABSTRACT CONCEPTS ═══════════ -->
+  <div class="section" id="complex-abstract-concepts">
+    <div class="section-header">
+      <span class="section-number">iv.</span>
+      <span class="section-title">Complex &amp; Abstract Concepts</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills">
+
+      <div class="skill primary">
+        <div class="skill-top">
+          <div class="skill-dot" style="background:var(--section-accent)"></div>
+          <div class="skill-name">Aesthetics &amp; Artistic Style</div>
+        </div>
+        <div class="skill-desc">Investigating how text-to-image diffusion models represent aesthetic and artistic concepts, separating content from style through cross-attention analysis.</div>
+        <div class="evidence">
+          <a class="ev pub" href="https://ieeexplore.ieee.org/abstract/document/11204333" target="_blank">The Cow of Rembrandt (IEEE MLSP 2025)</a>
+          <a class="ev repo" href="https://github.com/eliroc98/style-generation" target="_blank">style-generation</a>
+          <a class="ev repo" href="https://github.com/umilISLab/artistic-prompt-interpretation" target="_blank">artistic-prompt-interpretation</a>
+          <span class="ev concept">cross-attention heatmaps</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- ═══════════ 5. OTHER RESEARCH ═══════════ -->
+  <div class="section" id="other-research">
+    <div class="section-header">
+      <span class="section-number">v.</span>
+      <span class="section-title">Other Research</span>
+      <div class="section-line"></div>
+    </div>
+    <div class="skills">
+
+      <div class="skill">
+        <div class="skill-top">
+          <div class="skill-dot" style="background:var(--section-green)"></div>
+          <div class="skill-name">LLM Behaviour on Sensitive Content</div>
+        </div>
+        <div class="skill-desc">Empirical evaluation of how base and instruction-tuned LLMs handle sensitive content, including implicit content moderation.</div>
+        <div class="evidence">
+          <a class="ev pub" href="https://arxiv.org/abs/2507.23319" target="_blank">What's Taboo for You? (2025)</a>
+          <a class="ev repo" href="https://github.com/eliroc98/ai-safety" target="_blank">ai-safety</a>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-top">
+          <div class="skill-dot" style="background:var(--section-green)"></div>
+          <div class="skill-name">Linguistic Properties in LLMs</div>
+        </div>
+        <div class="skill-desc">Applied causal mediation analysis to trace how LLMs process and represent linguistic properties.</div>
+        <div class="evidence">
+          <span class="ev pub">Processing &amp; Representation of Linguistic Properties in LLMs (SEBD 2025)</span>
+          <span class="ev pub">Causal Mediation Analysis for Interpreting LLMs (2024)</span>
+          <span class="ev concept">causal mediation analysis</span>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-top">
+          <div class="skill-dot" style="background:var(--section-green)"></div>
+          <div class="skill-name">Explainable AI &amp; Feature Attribution</div>
+        </div>
+        <div class="skill-desc">Co-developed LumiXAI, a modular full-stack framework for feature attribution: ten attribution methods behind one plug-in interface, covering text and image classifiers, autoregressive generation and text-to-image diffusion, with a web GUI, a Python SDK and a small user study.</div>
+        <div class="evidence">
+          <a class="ev pub" href="https://arxiv.org/abs/2608.24524" target="_blank">LumiXAI (2026)</a>
+          <a class="ev tool" href="http://lumixai.islab.di.unimi.it" target="_blank">LumiXAI demo</a>
+          <span class="ev concept">feature attribution</span>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-top">
+          <div class="skill-dot" style="background:var(--section-green)"></div>
+          <div class="skill-name">Vision-Language Models</div>
+        </div>
+        <div class="skill-desc">Evaluating zero-shot capabilities of VLMs for biometric tasks via sequence-based predictions, including iris verification across datasets and input representations.</div>
+        <div class="evidence">
+          <a class="ev pub" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5381090" target="_blank">VLM Biometric Capabilities (2025)</a>
+          <span class="ev pub">Evaluation of VLMs for Iris Verification (ANNPR 2026)</span>
+          <a class="ev repo" href="https://github.com/sergiopicascia/vlm4biometrics" target="_blank">vlm4biometrics</a>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-top">
+          <div class="skill-dot" style="background:var(--section-green)"></div>
+          <div class="skill-name">Human Values &amp; NLP</div>
+        </div>
+        <div class="skill-desc">Research spanning human value detection in arguments (SemEval-2023, explainable knowledge extraction with SuperASKE), dialogue coherence, and clustering techniques on textual data with LIME explanations.</div>
+        <div class="evidence">
+          <a class="ev pub" href="https://aclanthology.org/2023.semeval-1.143/" target="_blank">Augustine of Hippo @ SemEval-2023</a>
+          <span class="ev pub">Open Issues in Human Value Detection (2023)</span>
+          <a class="ev repo" href="https://github.com/eliroc98/dialogue_coherence" target="_blank">dialogue_coherence</a>
+          <a class="ev repo" href="https://github.com/eliroc98/multilabel-text-clustering">multilabel-text-clustering</a>
+        </div>
+      </div>
+
+      <div class="skill">
+        <div class="skill-top">
+          <div class="skill-dot" style="background:var(--section-green)"></div>
+          <div class="skill-name">Interdisciplinary &amp; Applied Research</div>
+        </div>
+        <div class="skill-desc">Applying data and knowledge technologies beyond core AI: integrated tools for digital humanities (FAITH project), a literature review of Semantic Web technologies for Life Cycle Assessment in fashion, and a consensus-based Delphi study on sustainable luxury.</div>
+        <div class="evidence">
+          <span class="ev pub">The FAITH Project (2023)</span>
+          <span class="ev pub">Semantic Web for LCA in Fashion</span>
+          <span class="ev pub">Sustainable Luxury: A Delphi Study (Sustainable Development, 2026)</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  </section>
+</main>
+</div>
+
+<script src="toc.js"></script>
+</body>
+</html>
