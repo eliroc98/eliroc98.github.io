@@ -98,6 +98,7 @@
   nav a.active { color: var(--text); }
 
   .hero { padding: 20px 0 64px; }
+  .hero .links { margin-top: 0; }
 
   
 
@@ -167,36 +168,6 @@
   .bio strong {
     color: var(--text);
     font-weight: 600;
-  }
-
-  .cta-group {
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
-  }
-
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 14px 24px;
-    font-size: 0.88rem;
-    font-weight: 600;
-    text-decoration: none;
-    border-radius: 8px;
-    transition: all 0.25s;
-  }
-
-  .btn-primary {
-    background: var(--accent);
-    color: white;
-    border: 1px solid var(--accent);
-  }
-
-  .btn-primary:hover {
-    background: #c24e45;
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px var(--accent-glow);
   }
 
   .links {
