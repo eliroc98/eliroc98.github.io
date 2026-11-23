@@ -641,5 +641,16 @@
     nav .nav-inner { padding: 18px 16px; }
     nav .nav-links { gap: 12px; }
     nav a { font-size: 0.76rem; }
+    nav .nav-gh { display: none; }
+    nav .nav-inner { gap: 16px; }
+    nav .nav-links {
+      overflow-x: auto;
+      white-space: nowrap;
+      scrollbar-width: none;
+      -webkit-mask-image: linear-gradient(to right, #000 88%, transparent);
+      mask-image: linear-gradient(to right, #000 88%, transparent);
+      padding-right: 16px;
+    }
+    nav .nav-links::-webkit-scrollbar { display: none; }
     .news-scroll { max-height: 420px; }
   }
